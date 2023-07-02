@@ -1,0 +1,18 @@
+.nav-bar {
+  background-color: white;
+  border-block-style: solid;
+  border-block-width: thin thick;
+  display: flex;
+}
+
+.navbar-links-item {
+  margin: 0;
+  padding-right: 50px;
+  display: inline-block;
+}
+
+.logo {
+  width: 12%;
+  height: 12%;
+  padding-top: 15px;
+}
