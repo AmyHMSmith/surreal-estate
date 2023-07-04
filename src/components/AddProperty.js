@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import '../styles/add-property.css';
 
 const AddProperty = () => {
   const initialState = {
     fields: {
-      title: '2 bed flat',
+      title: '',
       type: '',
       bedrooms: '',
       bathrooms: '',
@@ -18,20 +19,31 @@ const AddProperty = () => {
 
   const handleAddProperty = (event) => {
     event.preventDefault();
-    console.log(fields);
+
+    axios
+      .post(`http://localhost:3000/api/v1/PropertyListing`, fields)
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+
+    console.log('end of the handleAddProperty event');
   };
 
   const handleFieldChange = (event) => {
     setFields({ ...fields, [event.target.name]: event.target.value });
+    console.log(fields);
   };
 
   return (
     <div>
       <div className="add-property" />
       <form onSubmit={handleAddProperty}>
-        {/*  <label htmlFor="title">
+        <label htmlFor="title">
           <input id="title" name="title" value={fields.title} onChange={handleFieldChange} />
-        </label> */}
+        </label>
         <label htmlFor="bedrooms">
           <input
             id="bedrooms"
