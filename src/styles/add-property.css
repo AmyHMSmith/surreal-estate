@@ -1,3 +1,51 @@
 .add-property {
-  padding-top: 20px;
+  margin: 100px 0;
+  margin-left: 100px 0;
+ /*  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px; */
+}
+
+.label {
+  display: flex;
+  align-items: left;
+  padding-bottom: 20px;
+}
+
+.search-button {
+  display: flex;
+  align-items: left;
+  width: 67px;
+  background-color: darkslateblue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+.search-button:hover {
+  background-color: cornflowerblue;
+}
+
+input[name] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
