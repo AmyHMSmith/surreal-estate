@@ -45,7 +45,6 @@ const AddProperty = () => {
 
   const handleFieldChange = (event) => {
     setFields({ ...fields, [event.target.name]: event.target.value });
-    console.log(fields);
   };
 
   return (
