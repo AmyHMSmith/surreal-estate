@@ -1,6 +1,10 @@
 import React from 'react';
 import logo from '../logo/logo.png';
 
+const handleEmailClick = () => {
+  document.location.href = 'mailto:someone-else@example.com';
+};
+
 const PropertyCard = ({ title, type, bathrooms, bedrooms, price, city }) => {
   return (
     <div className="property-card">
@@ -11,7 +15,11 @@ const PropertyCard = ({ title, type, bathrooms, bedrooms, price, city }) => {
       <div className="property-card__bathrooms">{bathrooms}</div>
       <div className="property-card__bedrooms">{bedrooms}</div>
       <div className="property-card__price">{price}</div>
-      {/* <button onClick={<a href="mailto:someone@example.com">Send email</a>} /> */}
+      <div className="email-button">
+        <button className="email-button" type="button" onClick={handleEmailClick}>
+          Send email
+        </button>
+      </div>
     </div>
   );
 };

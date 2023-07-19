@@ -1,4 +1,4 @@
 .property-card {
-  display: grid;
-  grid
+  grid-template-columns: 100px 1fr / 50px 1fr;
+  
 }
